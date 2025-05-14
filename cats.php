@@ -4,22 +4,22 @@
 // Array of cat images and descriptions
 $cats = [
     [
-        'image' => 'images/malaysian_cat1.jpg',
+        'image' => 'https://cdn2.thecatapi.com/images/MTY3ODIyMQ.jpg',
         'name' => 'Kucing Kampung',
         'description' => 'A common domestic cat found in Malaysian households.'
     ],
     [
-        'image' => 'images/malaysian_cat2.jpg',
+        'image' => 'https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg',
         'name' => 'Persian Cat',
         'description' => 'A popular breed in Malaysia known for its long fur and calm demeanor.'
     ],
     [
-        'image' => 'images/malaysian_cat3.jpg',
+        'image' => 'https://cdn2.thecatapi.com/images/8D--jCd21.jpg',
         'name' => 'Bengal Cat',
         'description' => 'A spotted cat with a wild appearance, loved by many in Malaysia.'
     ],
     [
-        'image' => 'images/malaysian_cat4.jpg',
+        'image' => 'https://cdn2.thecatapi.com/images/ai6Jps4sx.jpg',
         'name' => 'Siamese Cat',
         'description' => 'A sleek and elegant breed often seen in Malaysian homes.'
     ]
