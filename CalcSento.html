@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+    <title>Sento Spec Big Operation inc.</title>
+</head>
+<body>
+    <h1>Sento Operation</h1>
+    
+    <form>
+        <table border="1" align="left" width="40%">
+            <tr>
+                <td><strong>1st Number:</strong></td>
+                <td><input type="text" id="num1" /></td>
+            </tr>
+            <tr>
+                <td><strong>2nd Number:</strong></td>
+                <td><input type="text" id="num2" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <button type="button" onclick="calculate('*')">Multiply</button>
+                    <button type="button" onclick="calculate('/')">Divide</button>
+                    <button type="button" onclick="calculate('+')">Addition</button>
+                    <button type="button" onclick="calculate('-')">Subtraction</button>
+                </td>
+            </tr>
+            <div>
+                <tr>
+                    <td bgcolor="ff33fc">The Result is:</td>
+                    <td bgcolor="33fdff"><div id="result"></div></td>
+                </tr>
+            </div>
+        </table>
+    </form>
+
+    <script>
+        function validateInputs() {
+            const num1 = document.getElementById('num1').value;
+            const num2 = document.getElementById('num2').value;
+            
+            if (num1 === '' || num2 === '') {
+                alert('Please enter both numbers');
+                return false;
+            }
+            
+            if (isNaN(num1) || isNaN(num2)) {
+                alert('Please enter valid numbers only');
+                return false;
+            }
+            
+            return true;
+        }
+        
+        function calculate(opr) {
+            if (!validateInputs()) return;
+            
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            let result;
+            
+            switch(opr) {
+                case '*':
+                    result = num1 * num2;
+                    document.getElementById('result').innerHTML = `${result}`;
+                    break;
+                    
+                case '/':
+                    if (num2 === 0) {
+                        alert("You can't divide by 0");
+                        return;
+                    }
+                    result = (num1 / num2).toFixed(4);
+                    document.getElementById('result').innerHTML = `${result}`;
+                    break;
+                    
+                case '+':
+                    result = num1 + num2;
+                    document.getElementById('result').innerHTML = `${result}`;
+                    break;
+                    
+                case '-':
+                    result = num1 - num2;
+                    document.getElementById('result').innerHTML = `${result}`;
+                    break;
+                    
+                default:
+                    alert("Invalid operation");
+            }
+        }
+    </script>
+</body>
+</html>
